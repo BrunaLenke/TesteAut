@@ -1,0 +1,10 @@
+//usurio e senha incorretos
+
+from selenium import webdriver
+
+driver = webdriver.Chrome()  # Inicia o browser
+driver.get('https://pt-br.facebook.com/')  # Acessar a URL especificada
+driver.find_element_by_css_selector('#id-search-email').send_keys("email")  # Digita o texto "email" no input
+driver.find_element_by_css_selector('#id-search-senha').send_keys("senha")  # Digita o texto "senha" no input
+driver.find_element_by_css_selector('#entrar').click()  # Clica no botão de submit
+driver.quit()  # Encerra o browser
